@@ -13,4 +13,8 @@ import { User } from "./user/user";
 export class App {
   protected title = 'first-angular-app';
   protected users = DUMMY_USERS;
+
+  OnSelectUser(id: string) {
+    console.log(`Selected user with id: ${id}`);
+  }
 }
