@@ -12,7 +12,7 @@ export class User {
   @Input({required:true}) name!: string;
   //avatar = input.required<string>(); 
   //name = input.required<string>(); 
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
 
   imagePath() {
     return `assets/users/${this.avatar}`;
