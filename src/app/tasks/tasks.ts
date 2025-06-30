@@ -8,8 +8,8 @@ import { Task } from './task/task';
   styleUrl: './tasks.css'
 })
 export class Tasks {
-  @Input({required:true}) userId!: string;
-  @Input({required:true}) name!: string;
+  @Input({ required: true }) userId!: string;
+  @Input({ required: true }) name!: string;
   tasks = [
     {
       id: 't1',
@@ -38,5 +38,9 @@ export class Tasks {
 
   get selectedUserTasks() {
     return this.tasks.filter(task => task.userId === this.userId);
+  }
+
+  onCompleteTask(taskId: string) {
+    this.tasks = this.tasks.filter(task => task.id !== taskId);
   }
 }
