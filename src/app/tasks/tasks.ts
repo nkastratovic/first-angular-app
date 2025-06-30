@@ -49,4 +49,8 @@ export class Tasks {
   onAddTask() {
     this.isAddingTask = true;
   }
+
+  onCancelAddTask() {
+    this.isAddingTask = false;
+  }
 }
