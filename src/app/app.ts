@@ -14,7 +14,7 @@ import { User } from "./user/user";
 export class App {
   protected title = 'first-angular-app';
   protected users = DUMMY_USERS;
-  protected selectedUserId = 'u1';
+  protected selectedUserId? : string;
 
   get selectedUser() {
     return this.users.find(user => user.id === this.selectedUserId)!;
