@@ -1,16 +1,17 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { Card } from "../shared/card/card";
 import { UserType } from './user.model';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [Card],
   templateUrl: './user.html',
   styleUrl: './user.css'
 })
 export class User {
-  @Input({required:true}) user!:UserType;
-  @Input({required:true}) selected!: boolean;
+  @Input({ required: true }) user!: UserType;
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
 
   imagePath() {
